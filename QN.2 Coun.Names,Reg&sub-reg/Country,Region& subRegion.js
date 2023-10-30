@@ -3,7 +3,9 @@ const url =" https://restcountries.com/v3.1/all "
 myreq.addEventListener("load", function(){
   const obj = JSON.parse(this.response)
   for(let val of obj){
-      console.log(val.flags.png)
+      console.log(val.population) 
+      console.log(val.region)
+      console.log(val.subregion)
   }
 });
 myreq.open("GET",url);
